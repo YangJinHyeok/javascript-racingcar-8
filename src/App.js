@@ -20,7 +20,6 @@ class Car {
 }
 
 class App {
-  async run() {}
   async run() {
     try {
       const namesInput = await Console.readLineAsync(
