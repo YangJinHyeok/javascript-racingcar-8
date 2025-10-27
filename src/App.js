@@ -27,11 +27,14 @@ class App {
 
       const tryCountInput = await Console.readLineAsync("시도할 횟수는 몇 회인가요?\n");
       const tryCount = Number(tryCountInput);
+      Console.print("\n실행 결과");
+
       for (let i = 0; i < tryCount; i++) {
         this.play(cars);
         Console.print("");
       }
 
+      Console.print(`최종 우승자 : ${winners.join(", ")}`);
   play(cars) {
     cars.forEach((car) => {
       car.move();
