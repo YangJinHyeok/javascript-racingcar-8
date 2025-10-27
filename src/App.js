@@ -14,6 +14,11 @@ class Car {
     if (num >= 4) this.position += 1;
   }
 
+  getProgress() {
+    return "-".repeat(this.position);
+  }
+}
+
 class App {
   async run() {}
   async run() {
