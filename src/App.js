@@ -34,6 +34,7 @@ class App {
         Console.print("");
       }
 
+      const winners = this.getWinners(cars);
       Console.print(`최종 우승자 : ${winners.join(", ")}`);
   play(cars) {
     cars.forEach((car) => {
@@ -42,6 +43,10 @@ class App {
     });
   }
 
+  getWinners(cars) {
+    const maxPosition = Math.max(...cars.map((c) => c.position));
+    return cars.filter((c) => c.position === maxPosition).map((c) => c.name);
+  }
 }
 
 export default App;
