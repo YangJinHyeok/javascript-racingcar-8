@@ -9,6 +9,11 @@ class Car {
     this.position = 0;
   }
 
+  move() {
+    const num = Random.pickNumberInRange(0, 9);
+    if (num >= 4) this.position += 1;
+  }
+
 class App {
   async run() {}
   async run() {
